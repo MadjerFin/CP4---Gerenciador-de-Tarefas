@@ -106,3 +106,18 @@ listaTarefas.addEventListener('click', (e) => {
         extrairInfoTarefa(idTarefa);
     }
 });
+
+
+// Questão 6: Filter para mostrar apenas tarefas não concluídas
+botaoFiltrarPendentes.addEventListener('click', () => {
+    const tarefasPendentes = tarefas.filter(tarefa => !tarefa.concluida);
+    renderizarTarefas(tarefasPendentes);
+});
+
+// Botão para mostrar todas as tarefas
+botaoMostrarTodas.addEventListener('click', () => {
+    renderizarTarefas();
+});
+
+
+
