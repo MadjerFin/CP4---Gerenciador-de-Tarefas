@@ -1,6 +1,6 @@
 // questão1: Array para armazenar tarefas com tarefa inicial usando spread
 let tarefas = [
-    { ...{ id: 1, titulo: 'Tarefa inicial de exemplo', concluida: false } }
+    { ...{ id: 1, titulo: 'Tarefa de exemplo', concluida: false } }
 ];
 
 
@@ -40,6 +40,9 @@ formTarefa.addEventListener('submit', (evento) => {
         // Atualizar a lista de tarefas
         renderizarTarefas();
         
+
+        // Questão 7: Demonstrar o uso de map para criar lista em maiúsculas
+        obterTitulosTarefasEmMaiusculas();
     
     }
 });
@@ -122,7 +125,6 @@ botaoMostrarTodas.addEventListener('click', () => {
 
 
 // questão7: Map para criar lista com títulos em maiúsculas
-obterTitulosTarefasEmMaiusculas();
 function obterTitulosTarefasEmMaiusculas() {
     const titulosEmMaiusculas = tarefas.map(tarefa => tarefa.titulo.toUpperCase());
     console.log('Títulos em maiúsculas:', titulosEmMaiusculas);
