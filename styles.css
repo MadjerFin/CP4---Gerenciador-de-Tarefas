@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.task-input-section {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#entradaTarefa {
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#botaoAdicionarTarefa {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#botaoFiltrarPendentes {
+    background-color: #2196F3;
+    color: white;
+}
+
+#botaoMostrarTodas {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-control-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#listaTarefas {
+    list-style-type: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-item div {
+    display: flex;
+    gap: 10px;
+}
+
+.complete-btn, .delete-btn, .info-btn {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.complete-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.info-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.complete-btn:hover, .delete-btn:hover, .info-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.prioridade-alta {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.prioridade-normal {
+    color: #333;
+}
+
+.prioridade-baixa {
+    color: #4CAF50;
+    font-style: italic;
+}
+
+.task-item small {
+    display: block;
+    color: #666;
+    font-size: 0.7rem;
+    margin-top: 0.25rem;
+}
+
+/* Estilos para o formulário */
+form.task-input-section {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para foco nos inputs */
+#entradaTarefa:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
