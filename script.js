@@ -71,3 +71,38 @@ function renderizarTarefas(tarefasParaRenderizar = tarefas) {
     });
 }
 
+
+
+// questão5: Botão "Concluir" para alterar propriedade concluida
+// + Funcionalidade de excluir e mostrar info
+listaTarefas.addEventListener('click', (e) => {
+    const idTarefa = parseInt(e.target.dataset.id);
+    
+    // Botão de Concluir
+    if (e.target.classList.contains('complete-btn')) {
+        // Alterar a propriedade concluida
+        tarefas = tarefas.map(tarefa => 
+            tarefa.id === idTarefa ? { ...tarefa, concluida: !tarefa.concluida } : tarefa
+        );
+        
+        renderizarTarefas();
+        // Demonstrar uso de reduce após alterar estado
+        calcularTarefasConcluidas();
+    }
+    
+    // Botão de Excluir
+    if (e.target.classList.contains('delete-btn')) {
+        // Usando splice para remover a tarefa
+        const indice = tarefas.findIndex(tarefa => tarefa.id === idTarefa);
+        if (indice !== -1) {
+            tarefas.splice(indice, 1);
+            renderizarTarefas();
+        }
+    }
+    
+    // Botão de Info (para demonstrar destructuring)
+    if (e.target.classList.contains('info-btn')) {
+        // Questão 9: Destructuring para obter titulo e concluida
+        extrairInfoTarefa(idTarefa);
+    }
+});
