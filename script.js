@@ -44,3 +44,30 @@ formTarefa.addEventListener('submit', (evento) => {
     }
 });
 
+// questão4: Usar forEach para iterar sobre o array e exibir tarefas
+function renderizarTarefas(tarefasParaRenderizar = tarefas) {
+    listaTarefas.innerHTML = '';
+    
+    tarefasParaRenderizar.forEach(tarefa => {
+        const li = document.createElement('li');
+        li.classList.add('task-item');
+        
+        if (tarefa.concluida) {
+            li.classList.add('task-completed');
+        }
+        
+        li.innerHTML = `
+            <span>${tarefa.titulo}</span>
+            <div>
+                <button class="complete-btn" data-id="${tarefa.id}">
+                    ${tarefa.concluida ? 'Desmarcar' : 'Concluir'}
+                </button>
+                <button class="delete-btn" data-id="${tarefa.id}">Excluir</button>
+                <button class="info-btn" data-id="${tarefa.id}">Info</button>
+            </div>
+        `;
+        
+        listaTarefas.appendChild(li);
+    });
+}
+
