@@ -143,3 +143,16 @@ function calcularTarefasConcluidas() {
     
     alert(`Total de tarefas concluídas: ${totalConcluidas}\nTodas concluídas: ${todasConcluidas}\nAlguma concluída: ${algumaConcluida}`);
 }
+
+
+// questão9: Destructuring para extrair informações de tarefa
+function extrairInfoTarefa(idTarefa) {
+    const tarefa = tarefas.find(t => t.id === idTarefa);
+    
+    if (tarefa) {
+        // Usando destructuring para extrair propriedades
+        const { titulo, concluida } = tarefa;
+        alert(`Tarefa: ${titulo}\nStatus: ${concluida ? 'Concluída' : 'Pendente'}`);
+    }
+}
+
