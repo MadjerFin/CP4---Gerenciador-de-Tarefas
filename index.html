@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas Diárias</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerenciador de Tarefas Diárias</h1>
+        </header>
+        
+        <form id="formTarefa" class="task-input-section">
+            <input type="text" id="entradaTarefa" placeholder="Digite uma nova tarefa">
+            <button type="submit" id="botaoAdicionarTarefa" class="btn">Adicionar Tarefa</button>
+        </form>
+
+        <div class="task-control-section">
+            <div class="button-group">
+                <button id="botaoFiltrarPendentes" class="btn">Filtrar Pendentes</button>
+                <button id="botaoMostrarTodas" class="btn">Mostrar Todas</button>
+            </div>
+        </div>
+
+        <div class="task-list-section">
+            <ul id="listaTarefas"></ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
