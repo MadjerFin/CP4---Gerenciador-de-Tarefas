@@ -156,3 +156,22 @@ function extrairInfoTarefa(idTarefa) {
     }
 }
 
+// questão10: Função que aceita parâmetros e cria uma tarefa
+function criarTarefa(titulo, categoria = 'Geral') {
+    if (!titulo || titulo.trim() === '') {
+        alert('O título da tarefa não pode ser vazio!');
+        return null;
+    }
+
+    const novaTarefa = {
+        id: Date.now(),
+        titulo: titulo,
+        concluida: false,
+        categoria: categoria,
+        dataCriacao: new Date().toLocaleDateString()
+    };
+
+    tarefas.push(novaTarefa);
+    renderizarTarefas();
+    return novaTarefa;
+}
