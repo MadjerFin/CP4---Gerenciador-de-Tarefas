@@ -131,3 +131,15 @@ function obterTitulosTarefasEmMaiusculas() {
 
 
 
+// questão8: Reduce para calcular total de tarefas concluídas
+function calcularTarefasConcluidas() {
+    const totalConcluidas = tarefas.reduce((total, tarefa) => 
+        tarefa.concluida ? total + 1 : total, 0
+    );
+    
+    // Usando every e some para demonstração adicional
+    const todasConcluidas = tarefas.every(tarefa => tarefa.concluida);
+    const algumaConcluida = tarefas.some(tarefa => tarefa.concluida);
+    
+    alert(`Total de tarefas concluídas: ${totalConcluidas}\nTodas concluídas: ${todasConcluidas}\nAlguma concluída: ${algumaConcluida}`);
+}
