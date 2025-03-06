@@ -108,7 +108,7 @@ listaTarefas.addEventListener('click', (e) => {
 });
 
 
-// Questão 6: Filter para mostrar apenas tarefas não concluídas
+// questão6: Filter para mostrar apenas tarefas não concluídas
 botaoFiltrarPendentes.addEventListener('click', () => {
     const tarefasPendentes = tarefas.filter(tarefa => !tarefa.concluida);
     renderizarTarefas(tarefasPendentes);
@@ -118,6 +118,16 @@ botaoFiltrarPendentes.addEventListener('click', () => {
 botaoMostrarTodas.addEventListener('click', () => {
     renderizarTarefas();
 });
+
+
+
+// questão7: Map para criar lista com títulos em maiúsculas
+obterTitulosTarefasEmMaiusculas();
+function obterTitulosTarefasEmMaiusculas() {
+    const titulosEmMaiusculas = tarefas.map(tarefa => tarefa.titulo.toUpperCase());
+    console.log('Títulos em maiúsculas:', titulosEmMaiusculas);
+    return titulosEmMaiusculas;
+}
 
 
 
